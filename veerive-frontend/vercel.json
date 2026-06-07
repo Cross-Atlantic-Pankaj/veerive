@@ -1,0 +1,24 @@
+{
+  "functions": {
+    "src/app/api/home/route.js": {
+      "maxDuration": 30
+    },
+    "src/app/api/context-details/route.js": {
+      "maxDuration": 30
+    },
+    "src/app/api/influencer-comment/route.js": {
+      "maxDuration": 30
+    }
+  },
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=300, s-maxage=300"
+        }
+      ]
+    }
+  ]
+}

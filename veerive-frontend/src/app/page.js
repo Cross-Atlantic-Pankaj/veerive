@@ -1,0 +1,21 @@
+'use client';
+
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import Image from "next/image";
+
+export default function Home() {
+  const router = useRouter();
+
+  useEffect(() => {
+    // const token = localStorage.getItem('token');
+    // if (token) {
+    //   router.push('/home');
+    // } else {
+    //   router.push('/login');
+    // }
+    router.push('/home');
+  }, [router]);
+
+  return null;
+}

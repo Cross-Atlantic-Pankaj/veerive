@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.1) inset !important;
+  box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.1) inset !important;
+  color: white !important;
+  transition: background-color 5000s ease-in-out 0s; 
+  appearance: none !important;
+  -webkit-text-fill-color: white !important;
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0;  
+  background: transparent;
+}
+/* Executive Summary Bullet Points Styling */
+.executive-summary-content ul {
+  list-style-type: disc !important;
+  list-style-position: outside !important;
+  margin-left: 20px !important;
+  padding-left: 0 !important;
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+}
+
+.executive-summary-content li {
+  margin-bottom: 8px !important;
+  display: list-item !important;
+  list-style-type: disc !important;
+}
+
+.executive-summary-content p {
+  margin-bottom: 8px !important;
+}
+
+/* Drivers and Signals Bullet Points Styling */
+.drivers-signals-content ul {
+  list-style-type: disc !important;
+  list-style-position: outside !important;
+  margin-left: 20px !important;
+  padding-left: 0 !important;
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+}
+
+.drivers-signals-content li {
+  margin-bottom: 8px !important;
+  display: list-item !important;
+  list-style-type: disc !important;
+}
+
+.drivers-signals-content p {
+  margin-bottom: 8px !important;
+}
+
+/* Impact and Opinions Bullet Points Styling */
+.impact-opinions-content ul {
+  list-style-type: disc !important;
+  list-style-position: outside !important;
+  margin-left: 20px !important;
+  padding-left: 0 !important;
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+}
+
+.impact-opinions-content li {
+  margin-bottom: 8px !important;
+  display: list-item !important;
+  list-style-type: disc !important;
+}
+
+.impact-opinions-content p {
+  margin-bottom: 8px !important;
+}
+
+/* Consumer Dynamics Bullet Points Styling */
+.consumer-dynamics-content ul {
+  list-style-type: disc !important;
+  list-style-position: outside !important;
+  margin-left: 20px !important;
+  padding-left: 0 !important;
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+}
+
+.consumer-dynamics-content li {
+  margin-bottom: 8px !important;
+  display: list-item !important;
+  list-style-type: disc !important;
+}
+
+.consumer-dynamics-content p {
+  margin-bottom: 8px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
