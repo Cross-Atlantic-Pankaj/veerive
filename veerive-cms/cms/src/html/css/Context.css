@@ -1,0 +1,837 @@
+/* Modern Form Container Styles */
+.context-form-outer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background: #f8fafc;
+    padding: 2rem 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.context-form-container {
+    max-width: 1200px;
+    width: 100%;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 2.5rem;
+    margin: 2rem 0;
+}
+
+/* Form Layout */
+.context-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Form Sections */
+.context-form .form-section {
+    background: #f6f8fa;
+    border-radius: 14px;
+    padding: 2rem 1.5rem;
+    border: 1.5px solid #e0e7ef;
+    margin-bottom: 2.2rem;
+    box-shadow: 0 2px 12px rgba(30, 64, 175, 0.06);
+}
+
+.context-form .form-section-title {
+    color: #3730a3;
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 2px solid #e0e7ef;
+    background: none;
+}
+
+/* Field Groups */
+.context-form .field-group {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.context-form .field-group > div {
+    flex: 1;
+    min-width: 0; /* Prevent flex items from overflowing */
+}
+
+/* Input Fields */
+.context-form .context-input,
+.context-form .context-select,
+.context-form .context-textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    transition: all 0.2s ease;
+    background: #fff;
+    box-sizing: border-box;
+    color: #1e293b;
+    font-weight: 500;
+    box-shadow: 0 1px 4px rgba(30, 64, 175, 0.04);
+}
+
+.context-form .context-input:focus,
+.context-form .context-select:focus,
+.context-form .context-textarea:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+/* Labels */
+.context-form label {
+    display: block;
+    color: #0f172a;
+    font-weight: 700;
+    font-size: 1.08rem;
+    margin-bottom: 0.7rem;
+    letter-spacing: 0.01em;
+}
+
+.context-form .context-input::placeholder,
+.context-form .context-textarea::placeholder {
+    color: #64748b;
+    font-weight: 500;
+    opacity: 1;
+}
+
+/* Checkbox Container */
+.context-form .checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.context-form .checkbox-label {
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Submit Button */
+.context-form .submit-btn {
+    background: linear-gradient(90deg, #2563eb 0%, #1e40af 100%);
+    color: #fff;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.context-form .submit-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+/* React Select Customization */
+.context-form .context-select .css-26l3qy-menu,
+.context-form .theme-select .css-26l3qy-menu,
+.context-form .post-select .css-26l3qy-menu {
+    max-height: 300px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+.context-form .context-select .css-1p3m7a8-multiValue,
+.context-form .theme-select .css-1p3m7a8-multiValue,
+.context-form .post-select .css-1p3m7a8-multiValue {
+    background: #e2e8f0;
+    border-radius: 6px;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem;
+}
+
+/* Quill Editor Styling */
+.context-form .ql-container {
+    min-height: 200px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    margin-top: 0.5rem;
+}
+
+.context-form .ql-editor {
+    padding: 1rem;
+    min-height: 150px;
+    font-size: 0.95rem;
+}
+
+/* Slider Container */
+.context-form .slides-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.context-form .slide {
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+/* Refresh Button */
+.context-form .refresh-btn {
+    background: linear-gradient(90deg, #6366f1 0%, #3b82f6 100%);
+    color: #fff;
+    border: none;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(99,102,241,0.08);
+    transition: background 0.18s, box-shadow 0.18s;
+}
+
+.context-form .refresh-btn:disabled {
+    background: #e0e7ef;
+    color: #a3a3a3;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.context-form .refresh-btn:hover:not(:disabled) {
+    background: linear-gradient(90deg, #3b82f6 0%, #6366f1 100%);
+    box-shadow: 0 4px 16px rgba(99,102,241,0.12);
+}
+
+/* Home Button */
+.context-form .home-btn {
+    background: linear-gradient(90deg, #2563eb 0%, #1e40af 100%);
+    color: #fff;
+    font-weight: 600;
+    padding: 0.875rem 1.5rem;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-bottom: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.context-form .home-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+/* Animation for Refresh Button */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.context-form .spin {
+    animation: spin 1s linear infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .context-form-container {
+        padding: 1.5rem;
+        margin: 1rem 0;
+    }
+
+    .context-form .field-group {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .context-form .context-input,
+    .context-form .context-select,
+    .context-form .context-textarea {
+        font-size: 16px;
+    }
+
+    .context-form .theme-row {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .context-form .theme-row .refresh-btn {
+        width: 100%;
+        min-width: 0;
+        height: 44px;
+    }
+}
+
+/* Error States */
+.context-form .error-input {
+    border-color: #ef4444;
+}
+
+.context-form .error-message {
+    color: #ef4444;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+/* Success States */
+.context-form .success-input {
+    border-color: #10b981;
+}
+
+.context-form .success-message {
+    color: #10b981;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+/* Select Dropdowns */
+.context-form .css-1s2u09g-control,
+.context-form .css-1pahdxg-control {
+    min-height: 44px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    background: #fff;
+}
+
+.context-form .css-1s2u09g-control:hover,
+.context-form .css-1pahdxg-control:hover {
+    border-color: #3b82f6;
+}
+
+/* Multi-value Select */
+.context-form .css-1p3m7a8-multiValue {
+    background: #e2e8f0;
+    border-radius: 6px;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem;
+}
+
+.context-form .css-12jo7m5 {
+    color: #1e293b;
+    font-size: 0.95rem;
+}
+
+/* Dropdown Menu */
+.context-form .css-26l3qy-menu {
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 0.5rem;
+}
+
+.context-form .css-1n7v3ny-option {
+    background: #f8fafc;
+    color: #1e293b;
+    cursor: pointer;
+    padding: 0.75rem 1rem;
+}
+
+.context-form .css-1n7v3ny-option:hover {
+    background: #e2e8f0;
+}
+
+/* Ensure dropdowns are above other content */
+.context-form .css-26l3qy-menu,
+.context-form .css-1pahdxg-control,
+.context-form .css-1s2u09g-control {
+    z-index: 9999;
+}
+
+/* Pagination Styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.pagination button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.date-cell {
+  white-space: nowrap;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.05rem;           /* Slightly larger for clarity */
+  padding: 0.5em 1em;           /* More padding for space */
+  text-align: center;
+  background: #f0f4ff;          /* Softer background */
+  border-radius: 6px;
+  color: #0d133d;               /* Darker text for contrast */
+  border: 1px solid #e3e8f0;    /* Subtle border */
+  box-shadow: 0 1px 2px rgba(30, 64, 175, 0.04); /* Light shadow */
+  letter-spacing: 0.02em;       /* Slightly more readable */
+  transition: background 0.2s;
+}
+
+.date-cell:hover {
+  background: #e3e8f0;
+}
+
+/* --- Page Container --- */
+.context-list-container {
+  max-width: 100vw;
+  margin: 1.5rem 1vw;
+  /* Remove background and box-shadow for no container look */
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 2rem 1.5rem 2.5rem 1.5rem;
+}
+
+/* --- Table Styling --- */
+.context-table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #f9fbfd;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(30, 64, 175, 0.04);
+}
+.context-table th, .context-table td {
+  height: 70px;
+  vertical-align: middle;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  padding: 0.85em 1.1em;
+  text-align: left;
+}
+.context-table th {
+  background: #f3f6fa;
+  color: #1a237e;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-bottom: 2px solid #e3e8f0;
+  letter-spacing: 0.01em;
+}
+.context-table tr {
+  transition: background 0.18s;
+}
+.context-table tbody tr:nth-child(even) {
+  background: #f5f7fa;
+}
+.context-table tbody tr:nth-child(odd) {
+  background: #fff;
+}
+.context-table tbody tr:hover {
+  background: #e3e8f0;
+}
+.context-table td {
+  border-bottom: 1px solid #e3e8f0;
+  font-size: 0.9rem;
+}
+.context-table td:last-child, .context-table th:last-child {
+  text-align: center;
+}
+
+/* --- Button Styling --- */
+.add-context-btn, .edit-btn, .remove-btn, .search-btn, button {
+  background: linear-gradient(90deg, #3b82f6 0%, #6366f1 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6em 1.2em;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 0.2em;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(30, 64, 175, 0.08);
+  transition: background 0.18s, box-shadow 0.18s;
+}
+.add-context-btn:hover, .edit-btn:hover, .remove-btn:hover, .search-btn:hover, button:hover {
+  background: linear-gradient(90deg, #6366f1 0%, #3b82f6 100%);
+  box-shadow: 0 4px 16px rgba(30, 64, 175, 0.12);
+}
+.remove-btn {
+  background: linear-gradient(90deg, #ef4444 0%, #f59e42 100%);
+}
+.remove-btn:hover {
+  background: linear-gradient(90deg, #f59e42 0%, #ef4444 100%);
+}
+.edit-btn {
+  background: linear-gradient(90deg, #10b981 0%, #3b82f6 100%);
+}
+.edit-btn:hover {
+  background: linear-gradient(90deg, #3b82f6 0%, #10b981 100%);
+}
+
+/* --- Search & Filter Controls --- */
+.search-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 0.7rem;
+}
+.search-input {
+  padding: 0.7em 1em;
+  font-size: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  width: 260px;
+  background: #f8fafc;
+  transition: border 0.18s;
+}
+.search-input:focus {
+  border: 1.5px solid #6366f1;
+  outline: none;
+}
+
+/* --- Date Filter Controls --- */
+label {
+  font-size: 1rem;
+  color: #1a237e;
+  margin-right: 0.5em;
+}
+input[type="date"] {
+  padding: 0.5em 0.7em;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f8fafc;
+  margin-right: 1em;
+}
+
+/* --- Pagination --- */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.pagination button {
+  background: linear-gradient(90deg, #3b82f6 0%, #6366f1 100%);
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(30, 64, 175, 0.08);
+  transition: background 0.18s, box-shadow 0.18s;
+}
+.pagination button:disabled {
+  background: #e3e8f0;
+  color: #b0b0b0;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* --- Date Cell --- */
+.date-cell {
+  white-space: nowrap;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.05rem;
+  padding: 0.5em 1em;
+  text-align: center;
+  color: #0d133d;
+  letter-spacing: 0.02em;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+.date-main {
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+.date-time {
+  font-size: 0.92rem;
+  color: #3b3b3b;
+  font-family: 'Roboto Mono', monospace;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .context-list-container {
+    padding: 1rem 0.5rem;
+    margin: 1rem 0.2vw;
+  }
+  .context-table th, .context-table td {
+    padding: 0.5em 0.5em;
+    font-size: 0.98rem;
+  }
+  .search-input {
+    width: 100%;
+    min-width: 120px;
+  }
+}
+@media (max-width: 600px) {
+  .context-list-container {
+    padding: 0.5rem 0.1rem;
+    margin: 0.5rem 0.1vw;
+  }
+  .context-table th, .context-table td {
+    padding: 0.3em 0.2em;
+    font-size: 0.93rem;
+  }
+  .search-input {
+    width: 100%;
+    min-width: 80px;
+  }
+}
+
+/* Add gap between edit and remove buttons */
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  align-items: center;
+}
+.edit-btn, .remove-btn {
+  min-width: 90px;
+  padding: 0.6em 1.2em;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 6px;
+  display: inline-block;
+  text-align: center;
+}
+
+.collapsed-row {
+  height: 70px;
+  max-height: 70px;
+  overflow: hidden;
+  transition: max-height 0.25s cubic-bezier(0.4,0,0.2,1);
+}
+.expanded-row {
+  height: auto;
+  max-height: 1000px;
+  background: #f3f6fa;
+  transition: max-height 0.25s cubic-bezier(0.4,0,0.2,1);
+  box-shadow: 0 2px 8px rgba(30, 64, 175, 0.08);
+}
+
+.top-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.top-bar .left-controls,
+.top-bar .center-controls,
+.top-bar .right-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.heading-beautiful {
+  font-family: 'Inter', 'Segoe UI', 'Roboto', Arial, sans-serif;
+  font-size: 2.3rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #6366f1 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 0.01em;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: -1rem;
+  text-shadow: 0 2px 8px rgba(99,102,241,0.08);
+}
+
+.add-context-btn, .edit-btn, .remove-btn, .search-btn, button, input[type="date"], .search-input {
+  height: 44px;
+  min-width: 120px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.7rem;
+  }
+  .top-bar .left-controls,
+  .top-bar .center-controls,
+  .top-bar .right-controls {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 0.5rem;
+  }
+  .heading-beautiful {
+    font-size: 1.5rem;
+  }
+}
+
+/* --- Improved Theme Select Row --- */
+.context-form .theme-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+.context-form .theme-row .theme-select {
+    flex: 1 1 0%;
+    min-width: 0;
+}
+.context-form .theme-row .refresh-btn {
+    width: 48px;
+    min-width: 48px;
+    height: 48px;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+/* --- Form Section Background & Shadow --- */
+.context-form .form-section {
+    background: #f6f8fa;
+    border-radius: 14px;
+    padding: 2rem 1.5rem;
+    border: 1.5px solid #e0e7ef;
+    margin-bottom: 2.2rem;
+    box-shadow: 0 2px 12px rgba(30, 64, 175, 0.06);
+}
+
+/* --- Select/Dropdown Contrast --- */
+.context-form .theme-select .css-1s2u09g-control,
+.context-form .theme-select .css-1pahdxg-control {
+    background: #fff;
+    border: 1.5px solid #cbd5e1;
+    min-height: 48px;
+    font-size: 1.05rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(30, 64, 175, 0.04);
+}
+.context-form .theme-select .css-1s2u09g-control:hover,
+.context-form .theme-select .css-1pahdxg-control:hover {
+    border-color: #6366f1;
+}
+.context-form .theme-select .css-1p3m7a8-multiValue {
+    background: #e0e7ef;
+    color: #1e293b;
+    font-weight: 600;
+}
+
+/* --- Button Color --- */
+.context-form .refresh-btn {
+    background: linear-gradient(90deg, #6366f1 0%, #3b82f6 100%);
+    color: #fff;
+    border: none;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(99,102,241,0.08);
+    transition: background 0.18s, box-shadow 0.18s;
+}
+.context-form .refresh-btn:disabled {
+    background: #e0e7ef;
+    color: #a3a3a3;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+.context-form .refresh-btn:hover:not(:disabled) {
+    background: linear-gradient(90deg, #3b82f6 0%, #6366f1 100%);
+    box-shadow: 0 4px 16px rgba(99,102,241,0.12);
+}
+
+/* --- General Improvements --- */
+.context-form .context-input,
+.context-form .context-select,
+.context-form .context-textarea {
+    background: #fff;
+    border: 1.5px solid #cbd5e1;
+    font-size: 1.05rem;
+    color: #1e293b;
+    font-weight: 500;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(30, 64, 175, 0.04);
+}
+.context-form .context-input:focus,
+.context-form .context-select:focus,
+.context-form .context-textarea:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+/* --- Section Title --- */
+.context-form .form-section-title {
+    color: #3730a3;
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 2px solid #e0e7ef;
+    background: none;
+}
+
+/* --- Label & Placeholder Contrast --- */
+.context-form label {
+    color: #0f172a;
+    font-weight: 700;
+    font-size: 1.08rem;
+    margin-bottom: 0.7rem;
+    letter-spacing: 0.01em;
+}
+.context-form .context-input::placeholder,
+.context-form .context-textarea::placeholder {
+    color: #64748b;
+    font-weight: 500;
+    opacity: 1;
+}
+
+/* --- Select/Dropdown Contrast --- */
+.context-form .theme-select .css-1s2u09g-control,
+.context-form .theme-select .css-1pahdxg-control {
+    background: #fff;
+    border: 1.5px solid #cbd5e1;
+    min-height: 48px;
+    font-size: 1.05rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(30, 64, 175, 0.04);
+}
+.context-form .theme-select .css-1s2u09g-control:hover,
+.context-form .theme-select .css-1pahdxg-control:hover {
+    border-color: #6366f1;
+}
+.context-form .theme-select .css-1p3m7a8-multiValue {
+    background: #e0e7ef;
+    color: #1e293b;
+    font-weight: 600;
+}
+
+/* --- Button Color --- */
+.context-form .refresh-btn {
+    background: linear-gradient(90deg, #6366f1 0%, #3b82f6 100%);
+    color: #fff;
+    border: none;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(99,102,241,0.08);
+    transition: background 0.18s, box-shadow 0.18s;
+}
+.context-form .refresh-btn:disabled {
+    background: #e0e7ef;
+    color: #a3a3a3;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+.context-form .refresh-btn:hover:not(:disabled) {
+    background: linear-gradient(90deg, #3b82f6 0%, #6366f1 100%);
+    box-shadow: 0 4px 16px rgba(99,102,241,0.12);
+}

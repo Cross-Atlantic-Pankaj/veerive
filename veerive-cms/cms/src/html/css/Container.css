@@ -1,0 +1,222 @@
+/* Post.css */
+
+/* Container for the Post Page */
+.posts-container {
+    padding: 20px; /* Add 20px padding around the container */
+    font-family: Arial, sans-serif; /* Set the font for the entire container to Arial, with sans-serif as a fallback */
+}
+
+.posts-container h2 {
+    margin-bottom: 20px; /* Add 20px margin below the heading */
+    color: #333; /* Set the text color of the heading to a dark grey */
+}
+
+/* Container for Post List */
+.post-list-container {
+    margin-bottom: 20px; /* Add 20px margin below the post list container */
+}
+
+.add-post-btn {
+    background-color: #007bff; /* Set the background color of the button to blue */
+    color: #fff; /* Set the text color of the button to white */
+    border: none; /* Remove the default border */
+    padding: 10px 15px; /* Add 10px padding vertically and 15px padding horizontally */
+    cursor: pointer; /* Change cursor to a pointer to indicate the button is clickable */
+    font-size: 16px; /* Set the font size of the button text to 16px */
+    margin-bottom: 10px; /* Add 10px margin below the button */
+    border-radius: 4px; /* Add rounded corners with a 4px radius */
+}
+
+.add-post-btn:hover {
+    background-color: #0056b3; /* Change the background color to a darker blue when hovered */
+}
+
+.search-container {
+    margin-bottom: 20px; /* Add 20px margin below the search container */
+}
+
+.search-input {
+    padding: 8px; /* Add 8px padding inside the search input */
+    font-size: 16px; /* Set the font size of the search input text to 16px */
+    border-radius: 4px; /* Add rounded corners with a 4px radius */
+    border: 1px solid #ccc; /* Add a 1px solid border with a light grey color */
+}
+
+.search-btn {
+    background-color: #007bff; /* Set the background color of the search button to blue */
+    color: #fff; /* Set the text color of the search button to white */
+    border: none; /* Remove the default border */
+    padding: 8px 15px; /* Add 8px padding vertically and 15px padding horizontally */
+    cursor: pointer; /* Change cursor to a pointer to indicate the button is clickable */
+    font-size: 16px; /* Set the font size of the button text to 16px */
+    margin-left: 10px; /* Add 10px margin to the left of the search button */
+    border-radius: 4px; /* Add rounded corners with a 4px radius */
+}
+
+.search-btn:hover {
+    background-color: #0056b3; /* Change the background color to a darker blue when hovered */
+}
+
+.post-table {
+    width: 100%; /* Make the table take up the full width of its container */
+    border-collapse: collapse; /* Collapse table borders to avoid double borders */
+}
+
+.post-table th, .post-table td {
+    border: 1px solid #ddd; /* Add a 1px solid border with a light grey color around table cells */
+    padding: 8px; /* Add 8px padding inside table cells */
+    text-align: left; /* Align text to the left inside table cells */
+}
+
+.post-table th {
+    background-color: #f4f4f4; /* Set the background color of table headers to a light grey */
+    cursor: pointer; /* Change cursor to a pointer to indicate the headers are clickable */
+}
+
+.post-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Set a light grey background color for even table rows */
+}
+
+.post-table tbody tr:hover {
+    background-color: #eaeaea; /* Change the background color to a slightly darker grey when a row is hovered */
+}
+
+.edit-btn, .remove-btn {
+    border: none; /* Remove the default border */
+    color: #fff; /* Set the text color to white */
+    padding: 5px 10px; /* Add 5px padding vertically and 10px padding horizontally */
+    cursor: pointer; /* Change cursor to a pointer to indicate the button is clickable */
+    border-radius: 4px; /* Add rounded corners with a 4px radius */
+    font-size: 14px; /* Set the font size of the button text to 14px */
+}
+
+.edit-btn {
+    background-color: #28a745; /* Set the background color of the edit button to green */
+    margin-right: 5px; /* Add 5px margin to the right of the edit button */
+}
+
+.edit-btn:hover {
+    background-color: #218838; /* Change the background color to a darker green when hovered */
+}
+
+.remove-btn {
+    background-color: #dc3545; /* Set the background color of the remove button to red */
+}
+
+.remove-btn:hover {
+    background-color: #c82333; /* Change the background color to a darker red when hovered */
+}
+
+/* Container for Post Form */
+.post-form-container {
+    margin: 0 auto; /* Center the form container horizontally */
+    padding: 20px; /* Add 20px padding inside the form container */
+    max-width: 800px; /* Set a maximum width of 800px for the form container */
+}
+
+.post-form {
+    display: flex; /* Use Flexbox for layout */
+    flex-direction: column; /* Arrange form elements in a column */
+    max-width: 600px; /* Set a maximum width of 600px for the form */
+    margin: auto; /* Center the form horizontally */
+}
+
+.post-form label {
+    font-weight: bold; /* Make label text bold */
+    margin-bottom: 5px; /* Add 5px margin below the label */
+}
+
+.post-input, .post-textarea {
+    padding: 10px; /* Add 10px padding inside the input and textarea fields */
+    margin-bottom: 15px; /* Add 15px margin below the input and textarea fields */
+    border-radius: 4px; /* Add rounded corners with a 4px radius */
+    border: 1px solid #ccc; /* Add a 1px solid border with a light grey color */
+}
+
+.post-select {
+    width: 100%; /* Make select elements take up the full width of their container */
+    margin: 8px 0; /* Add 8px margin above and below the select elements */
+}
+
+.post-input {
+    font-size: 16px; /* Set the font size of the input text to 16px */
+}
+
+.post-textarea {
+    font-size: 16px; /* Set the font size of the textarea text to 16px */
+    resize: vertical; /* Allow vertical resizing of the textarea */
+}
+
+.post-select {
+    font-size: 16px; /* Set the font size of the select options to 16px */
+}
+
+.post-checkbox {
+    margin-right: 10px; /* Add 10px margin to the right of the checkbox */
+}
+
+.post-submit-btn {
+    background-color: #007bff; /* Set the background color of the submit button to blue */
+    color: #fff; /* Set the text color of the submit button to white */
+    border: none; /* Remove the default border */
+    padding: 10px 15px; /* Add 10px padding vertically and 15px padding horizontally */
+    cursor: pointer; /* Change cursor to a pointer to indicate the button is clickable */
+    font-size: 16px; /* Set the font size of the button text to 16px */
+    border-radius: 4px; /* Add rounded corners with a 4px radius */
+}
+
+.post-submit-btn:hover {
+    background-color: #0056b3; /* Change the background color to a darker blue when hovered */
+}
+
+.quill-editor {
+    height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.post-quill {
+    height: 200px;
+    margin-bottom: 1rem;
+}
+
+.post-input,
+.post-select,
+.post-textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.post-textarea {
+    height: 100px;
+}
+
+/* Container.css */
+
+.container-form {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.context-selector {
+    margin-bottom: 20px;
+}
+
+.context-selector label {
+    margin-right: 10px;
+}
+
+.post-list {
+    margin-top: 20px;
+}
+
+.post-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.post-list li {
+    margin-bottom: 10px;
+}

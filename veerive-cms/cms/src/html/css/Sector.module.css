@@ -1,0 +1,440 @@
+/* Source List Module CSS */
+.contentContainer {
+    padding: 24px;
+    background-color: #f8fafc;
+    min-height: 100vh;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.pageHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.pageHeader h2 {
+    font-size: 1.25rem;
+    color: #1a1a1a;
+    margin: 0;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+.headerActions {
+    display: flex;
+    gap: 12px;
+}
+
+.primaryButton {
+    background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.primaryButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(79, 70, 229, 0.4);
+}
+
+.primaryButton:active {
+    transform: translateY(0);
+}
+
+.statsCard {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.statsCard:hover {
+    transform: translateY(-2px);
+}
+
+.statsNumber {
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #4F46E5, #7C3AED);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+}
+
+.statsLabel {
+    font-size: 1.1rem;
+    color: #64748b;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.searchInput {
+    flex: 1;
+    max-width: 400px;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    background-color: white;
+}
+
+.searchInput:focus {
+    outline: none;
+    border-color: #4F46E5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.searchInput::placeholder {
+    color: #94a3b8;
+}
+
+.tableWrapper {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+}
+
+.dataTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.dataTable thead {
+    background: #000000;
+    /* Fallback background */
+    background-color: #000000;
+}
+
+.dataTable th {
+    padding: 16px;
+    text-align: left;
+    font-weight: 600;
+    color: rgb(0, 0, 0) !important;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s ease;
+    position: relative;
+    border: none;
+    /* Ensure text is visible */
+    text-shadow: none;
+}
+
+.dataTable th:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dataTable td {
+    padding: 16px;
+    border-bottom: 1px solid #f1f5f9;
+    color: #334155;
+    vertical-align: middle;
+}
+
+.dataTable tbody tr {
+    transition: all 0.2s ease;
+}
+
+.dataTable tbody tr:hover {
+    background-color: #f8fafc;
+    transform: scale(1.001);
+}
+
+.dataTable tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.actionButton {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-right: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.editButton {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.editButton:hover {
+    background-color: #2563eb;
+    transform: translateY(-1px);
+}
+
+.deleteButton {
+    background-color: #ef4444;
+    color: white;
+}
+
+.deleteButton:hover {
+    background-color: #dc2626;
+    transform: translateY(-1px);
+}
+
+.actionButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    background-color: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.pagination button {
+    padding: 8px 16px;
+    border: 1px solid #d1d5db;
+    background-color: white;
+    color: #374151;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+    background-color: #4F46E5;
+    color: white;
+    border-color: #4F46E5;
+}
+
+.pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.emptyMessage {
+    text-align: center;
+    color: #64748b;
+    font-style: italic;
+    padding: 40px 20px;
+}
+
+.loadingContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    color: #64748b;
+}
+
+.loadingSpinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #e2e8f0;
+    border-top: 4px solid #4F46E5;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 16px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .contentContainer {
+        padding: 16px;
+    }
+    
+    .pageHeader {
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+    }
+    
+    .headerActions {
+        justify-content: center;
+    }
+    
+    .statsNumber {
+        font-size: 2.5rem;
+    }
+    
+    .dataTable {
+        font-size: 12px;
+    }
+    
+    .dataTable th,
+    .dataTable td {
+        padding: 12px 8px;
+    }
+    
+    .actionButton {
+        padding: 6px 12px;
+        font-size: 11px;
+        margin-right: 4px;
+    }
+    
+    .pagination {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+}
+
+/* Form Styling */
+.companyFormContainer {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+    margin: 20px auto;
+    padding: 32px;
+    max-width: 900px;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+.companyFormContainer h2 {
+    font-size: 24px;
+    color: #1a1a1a;
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e5e7eb;
+    margin: 0 0 32px 0;
+}
+
+.companyForm {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.companyForm > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.companyForm label {
+    font-weight: 500;
+    color: #374151;
+    font-size: 14px;
+}
+
+.companyForm label span {
+    color: #dc2626;
+    margin-left: 4px;
+}
+
+.companyInput,
+.companyTextarea,
+.companySelect {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #1f2937;
+    background-color: white;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.companyInput:focus,
+.companyTextarea:focus,
+.companySelect:focus {
+    outline: none;
+    border-color: #4F46E5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.companySelect {
+    cursor: pointer;
+    padding-right: 32px;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 8px center;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}
+
+.companySelect:disabled {
+    background-color: #f3f4f6;
+    cursor: not-allowed;
+}
+
+.companyTextarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.companySubmitBtn {
+    background: #4F46E5;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 16px;
+    margin-right: 12px;
+}
+
+.companySubmitBtn:hover {
+    background: #4338CA;
+}
+
+.companySubmitBtn:disabled {
+    background: #9CA3AF;
+    cursor: not-allowed;
+}
+
+.cancelBtn {
+    background: #6B7280;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 16px;
+}
+
+.cancelBtn:hover {
+    background: #4B5563;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}

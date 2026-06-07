@@ -1,0 +1,628 @@
+/* Container for the entire tile template page */
+.contentContainer {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin-top: 20px;
+    width: 95%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Page header styling */
+.pageHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.pageTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+/* List header styling */
+.listHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 20px;
+}
+
+.searchBar {
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 320px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+.searchBar:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+/* Button styling */
+.primaryButton {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.primaryButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+/* Tile grid layout */
+.tileGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+}
+
+/* Individual tile item styling */
+.tileTemplateItem {
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.tileTemplateItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.itemHeader {
+    margin-bottom: 12px;
+}
+
+.itemTitle {
+    margin: 0 0 4px 0;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #333;
+}
+
+.itemType {
+    font-size: 0.85em;
+    color: #6c757d;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Preview section styling */
+.tilePreview {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #e9ecef;
+    border-radius: 8px;
+    margin: 12px 0;
+    min-height: 100px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    transition: background-color 0.3s ease;
+}
+
+/* Actions container */
+.tileActions {
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid #e9ecef;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+/* Button styling for actions */
+.actionButton {
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    padding: 6px 12px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    font-size: 0.85em;
+    min-width: 70px;
+}
+
+.editButton {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.deleteButton {
+    background: linear-gradient(135deg, #ef4444 0%, #f87171 100%);
+    color: white;
+}
+
+.actionButton:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* Pagination styling */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.paginationButton {
+    background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.paginationButton:hover:not(:disabled) {
+    background: linear-gradient(135deg, #495057 0%, #343a40 100%);
+    transform: translateY(-1px);
+}
+
+.paginationButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.pageInfo {
+    font-weight: 600;
+    color: #495057;
+    font-size: 1em;
+}
+
+/* Form wrapper styling */
+.formWrapper {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+    width: 95%;
+}
+
+.formHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.formTitle {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+    font-weight: 600;
+}
+
+.closeButton {
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #aaa;
+    line-height: 1;
+    padding: 5px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.closeButton:hover {
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Form group styling */
+.formGroup {
+    margin-bottom: 20px;
+}
+
+.formLabel {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+    font-size: 1em;
+}
+
+.formInput,
+.formTextarea,
+.formRange,
+.formSelect {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.formInput:focus,
+.formTextarea:focus,
+.formSelect:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.formInput[type="color"] {
+    padding: 6px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.formRange {
+    padding: 0;
+    height: 8px;
+    background: #e9ecef;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.formRange::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #007bff;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 123, 255, 0.3);
+}
+
+/* Range display styling */
+.rangeDisplay {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.rangeInput {
+    flex: 1;
+}
+
+.rangeValue {
+    background: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    min-width: 60px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+/* Form actions styling */
+.formActions {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e9ecef;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.saveButton {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cancelButton {
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.saveButton:hover:not(:disabled),
+.cancelButton:hover:not(:disabled) {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.saveButton:disabled,
+.cancelButton:disabled,
+.actionButton:disabled,
+.primaryButton:disabled,
+.searchBar:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.formWrapper {
+    position: relative;
+}
+
+/* Help text styling */
+.formHelpText {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.85em;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.formHelpText code {
+    background-color: #e9ecef;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-style: normal;
+}
+
+/* Loading and empty states */
+.loadingContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    color: #6c757d;
+}
+
+.loadingSpinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #e9ecef;
+    border-top: 4px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.emptyMessage {
+    text-align: center;
+    padding: 60px 20px;
+    color: #6c757d;
+    font-size: 1.1em;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .contentContainer {
+        padding: 15px;
+        width: 100%;
+    }
+    
+    .pageHeader {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+    
+    .listHeader {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .searchBar {
+        width: 100%;
+    }
+    
+    .tileGrid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .tileActions {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .actionButton {
+        width: 100%;
+    }
+    
+    .pagination {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .formWrapper {
+        width: 100%;
+        margin: 10px auto;
+        padding: 20px;
+    }
+    
+    .formActions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .saveButton,
+    .cancelButton {
+        width: 100%;
+    }
+}
+
+/* Form Styling */
+.companyFormContainer {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+    margin: 20px auto;
+    padding: 32px;
+    max-width: 900px;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+.companyFormContainer h2 {
+    font-size: 24px;
+    color: #1a1a1a;
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e5e7eb;
+    margin: 0 0 32px 0;
+}
+
+.companyForm {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.companyForm > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.companyForm label {
+    font-weight: 500;
+    color: #374151;
+    font-size: 14px;
+}
+
+.companyForm label span {
+    color: #dc2626;
+    margin-left: 4px;
+}
+
+.companyInput,
+.companyTextarea,
+.companySelect {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #1f2937;
+    background-color: white;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.companyInput:focus,
+.companyTextarea:focus,
+.companySelect:focus {
+    outline: none;
+    border-color: #4F46E5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.companySelect {
+    cursor: pointer;
+    padding-right: 32px;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 8px center;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}
+
+.companySelect:disabled {
+    background-color: #f3f4f6;
+    cursor: not-allowed;
+}
+
+.companyTextarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.companySubmitBtn {
+    background: #4F46E5;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 16px;
+    margin-right: 12px;
+}
+
+.companySubmitBtn:hover {
+    background: #4338CA;
+}
+
+.companySubmitBtn:disabled {
+    background: #9CA3AF;
+    cursor: not-allowed;
+}
+
+.cancelBtn {
+    background: #6B7280;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 16px;
+}
+
+.cancelBtn:hover {
+    background: #4B5563;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+} 

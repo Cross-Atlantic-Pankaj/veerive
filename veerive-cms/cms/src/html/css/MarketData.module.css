@@ -1,0 +1,481 @@
+/* MarketData Module Styles */
+.contentContainer {
+    padding: 20px;
+    margin-top: 20px; /* Reduced from 64px to fix extra space */
+    width: 95%; /* Increased from 70% */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: none;
+}
+
+.pageHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.pageHeader h2 {
+    font-size: 24px;
+    color: #1a1a1a;
+    margin: 0;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+.headerActions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.primaryButton {
+    background: #4F46E5;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+}
+
+.primaryButton:hover {
+    background: #4338CA;
+}
+
+.primaryButton:disabled {
+    background: #9CA3AF;
+    cursor: not-allowed;
+}
+
+/* CSV Upload Styles */
+.csv-upload-button,
+:global(.csv-upload-button) {
+    background: #4F46E5;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.csv-upload-button:hover,
+:global(.csv-upload-button):hover {
+    background: #4338CA;
+}
+
+.csv-template-link,
+:global(.csv-template-link) {
+    background: #6B7280;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    display: inline-block;
+    margin-left: 8px;
+}
+
+.csv-template-link:hover,
+:global(.csv-template-link):hover {
+    background: #4B5563;
+}
+
+.searchInput {
+    width: 300px;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #1f2937;
+    background-color: white;
+    transition: all 0.2s ease;
+}
+
+.searchInput:focus {
+    outline: none;
+    border-color: #4F46E5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.searchInput::placeholder {
+    color: #9CA3AF;
+}
+
+.loadingContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    color: #6B7280;
+}
+
+.loadingSpinner {
+    border: 3px solid #f3f4f6;
+    border-top: 3px solid #4F46E5;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 16px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.tableWrapper {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.dataTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 14px;
+}
+
+.dataTable thead {
+    background-color: #f8fafc;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.dataTable th {
+    padding: 16px 12px;
+    text-align: left;
+    font-weight: 600;
+    color: #374151;
+    cursor: pointer;
+    user-select: none;
+    border-right: 1px solid #e5e7eb;
+    white-space: nowrap;
+}
+
+.dataTable th:hover {
+    background-color: #f1f5f9;
+}
+
+.dataTable th:last-child {
+    border-right: none;
+}
+
+.dataTable td {
+    padding: 12px;
+    border-bottom: 1px solid #f3f4f6;
+    border-right: 1px solid #e5e7eb;
+    vertical-align: top;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.dataTable td:last-child {
+    border-right: none;
+}
+
+.dataTable tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+.dataTable tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.actionButton {
+    background: #4F46E5;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: none;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-right: 8px;
+}
+
+.actionButton:hover {
+    background: #4338CA;
+}
+
+.deleteButton {
+    background: #DC2626;
+}
+
+.deleteButton:hover {
+    background: #B91C1C;
+}
+
+.emptyMessage {
+    text-align: center;
+    color: #6B7280;
+    font-style: italic;
+    padding: 40px !important;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    background-color: #f8fafc;
+    border-top: 1px solid #e5e7eb;
+    font-size: 14px;
+    color: #374151;
+}
+
+.pagination button {
+    background: #4F46E5;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+    background: #4338CA;
+}
+
+.pagination button:disabled {
+    background: #9CA3AF;
+    cursor: not-allowed;
+}
+
+.pagination span {
+    font-weight: 500;
+}
+
+/* Form Styles */
+.formContainer {
+    padding: 20px;
+    margin-top: 20px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: none;
+}
+
+.companyFormContainer {
+    width: 100%;
+    background: #f6f8fa;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    padding: 32px;
+    max-width: 900px;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+.companyFormContainer h2 {
+    font-size: 24px;
+    color: #1a1a1a;
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e5e7eb;
+    margin: 0 0 32px 0;
+}
+
+.companyForm {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.companyForm > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.companyForm label {
+    font-weight: 500;
+    color: #374151;
+    font-size: 14px;
+}
+
+.companyForm label span {
+    color: #dc2626;
+    margin-left: 4px;
+}
+
+.companyInput,
+.companyTextarea,
+.companySelect {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #1f2937;
+    background-color: white;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.companyInput:focus,
+.companyTextarea:focus,
+.companySelect:focus {
+    outline: none;
+    border-color: #4F46E5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.companySelect {
+    cursor: pointer;
+    padding-right: 32px;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 8px center;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}
+
+.companySelect:disabled {
+    background-color: #f3f4f6;
+    cursor: not-allowed;
+}
+
+.companyTextarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.companySubmitBtn {
+    background: #4F46E5;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 16px;
+    margin-right: 12px;
+}
+
+.companySubmitBtn:hover {
+    background: #4338CA;
+}
+
+.companySubmitBtn:disabled {
+    background: #9CA3AF;
+    cursor: not-allowed;
+}
+
+.cancelBtn {
+    background: #6B7280;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 16px;
+}
+
+.cancelBtn:hover {
+    background: #4B5563;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    .contentContainer {
+        width: 98%;
+        padding: 15px;
+    }
+    
+    .formContainer {
+        width: 98%;
+        padding: 15px;
+    }
+    
+    .pageHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    
+    .headerActions {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .contentContainer {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+    }
+    
+    .formContainer {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+    }
+    
+    .companyFormContainer {
+        padding: 16px;
+        max-width: 100%;
+    }
+    
+    .searchInput {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .tableWrapper {
+        overflow-x: auto;
+    }
+    
+    .dataTable {
+        min-width: 900px;
+    }
+    
+    .pagination {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+    
+    .pagination button {
+        min-width: 80px;
+    }
+    
+    .buttonGroup {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .companySubmitBtn,
+    .cancelBtn {
+        width: 100%;
+        margin-right: 0;
+    }
+} 

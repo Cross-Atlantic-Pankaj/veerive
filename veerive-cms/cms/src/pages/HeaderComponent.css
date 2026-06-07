@@ -1,0 +1,39 @@
+.header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header-section {
+    flex: 1;
+    text-align: center;
+}
+
+.header-section h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #f1c40f;
+}
+
+.header-section nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.header-section nav a:hover {
+    color: #f39c12;
+    text-decoration: underline;
+}
+
+.header-section nav a:active {
+    color: #e67e22;
+}

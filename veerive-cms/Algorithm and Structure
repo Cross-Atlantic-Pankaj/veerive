@@ -1,0 +1,19 @@
+Algorithm and structure
+===================NEXT STEPS=======================================================
+VEERIVE PLATFORM
+- plan FE
+- setup index n app
+- Pulse today page
+===================KEY THINGS TO BE DONE=======================================================
+- need to change sources to not show all
+- .show routes?
+- in update of profile ensuring only admin can retrieve or user can access own profile
+===============================================================================================
+User register
+1. data captured in user and profile schemas
+2. 
+
+Login, fortgot, reset password
+
+User profile, preferences, type
+

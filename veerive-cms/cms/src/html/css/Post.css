@@ -1,0 +1,416 @@
+/* Post.css */
+
+/* Container for the Post Page */
+.posts-container {
+    padding: 32px;
+    font-family: 'Inter', Arial, sans-serif;
+    background: #f6f8fa;
+    min-height: 100vh;
+}
+
+.posts-container h2 {
+    margin-bottom: 20px; /* Add 20px margin below the heading */
+    color: #333; /* Set the text color of the heading to a dark grey */
+}
+
+/* Container for Post List */
+.post-list-container {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(30, 41, 59, 0.10);
+    padding: 2.5rem 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.post-list-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.date-range-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.date-range-controls label {
+    font-weight: 600;
+    color: #3730a3;
+    font-size: 1rem;
+}
+
+.date-range-controls input[type="date"] {
+    padding: 0.5rem 0.75rem;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #f8fafc;
+    color: #1e293b;
+    transition: border 0.2s;
+}
+.date-range-controls input[type="date"]:focus {
+    border: 1.5px solid #6366f1;
+    outline: none;
+}
+
+.download-csv-btn, .add-post-btn, .search-btn {
+    background: linear-gradient(90deg, #6366f1 0%, #60a5fa 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.08);
+    transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+.download-csv-btn:hover, .add-post-btn:hover, .search-btn:hover {
+    background: linear-gradient(90deg, #4338ca 0%, #2563eb 100%);
+    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.12);
+    transform: translateY(-2px) scale(1.03);
+}
+.add-post-btn {
+    background: linear-gradient(90deg, #16a34a 0%, #22d3ee 100%);
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.08);
+}
+.add-post-btn:hover {
+    background: linear-gradient(90deg, #15803d 0%, #0e7490 100%);
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.search-input {
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1.5px solid #cbd5e1;
+    background: #f8fafc;
+    color: #1e293b;
+    width: 300px;
+    transition: border 0.2s;
+}
+.search-input:focus {
+    border: 1.5px solid #6366f1;
+    outline: none;
+}
+
+/* --- Modern Table Styles --- */
+.post-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #f8fafc;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(30, 64, 175, 0.04);
+}
+
+.post-table th, .post-table td {
+    padding: 1rem 0.75rem;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.post-table th {
+    background: #e0e7ef;
+    color: #3730a3;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    border-bottom: 2px solid #cbd5e1;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.post-table th:hover {
+    background: #6366f1;
+    color: #fff;
+}
+
+.post-table tbody tr {
+    background: #fff;
+    transition: background 0.2s;
+}
+
+.post-table tbody tr:nth-child(even) {
+    background: #f4f7fa;
+}
+
+.post-table tbody tr:hover {
+    background: #e0e7ef;
+}
+
+.edit-btn, .remove-btn {
+    border: none;
+    color: #fff;
+    padding: 0.5rem 1.1rem;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-right: 0.5rem;
+    transition: background 0.2s, transform 0.1s;
+}
+.edit-btn {
+    background: linear-gradient(90deg, #16a34a 0%, #22d3ee 100%);
+}
+.edit-btn:hover {
+    background: linear-gradient(90deg, #15803d 0%, #0e7490 100%);
+    transform: scale(1.05);
+}
+.remove-btn {
+    background: linear-gradient(90deg, #dc2626 0%, #f59e42 100%);
+}
+.remove-btn:hover {
+    background: linear-gradient(90deg, #b91c1c 0%, #ea580c 100%);
+    transform: scale(1.05);
+}
+
+/* --- Pagination --- */
+.pagination-controls, .post-list-container > div[style*='justify-content: center'] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+    padding: 1rem 0;
+}
+.pagination-controls button, .post-list-container > div[style*='justify-content: center'] button {
+    padding: 0.5rem 1.2rem;
+    border: 1.5px solid #6366f1;
+    border-radius: 6px;
+    background: #fff;
+    color: #3730a3;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+}
+.pagination-controls button:disabled, .post-list-container > div[style*='justify-content: center'] button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.pagination-controls button:not(:disabled):hover, .post-list-container > div[style*='justify-content: center'] button:not(:disabled):hover {
+    background: #6366f1;
+    color: #fff;
+    border: 1.5px solid #3730a3;
+}
+
+.page-info, .post-list-container > div[style*='justify-content: center'] span {
+    font-size: 1rem;
+    color: #6366f1;
+    font-weight: 600;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+    .post-list-container {
+        padding: 1.2rem 0.5rem;
+    }
+    .search-input {
+        width: 100%;
+    }
+    .post-table th, .post-table td {
+        padding: 0.7rem 0.4rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .post-list-controls, .date-range-controls, .search-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.7rem;
+    }
+    .post-list-container {
+        padding: 0.5rem 0.1rem;
+    }
+}
+
+/* Container for Post Form */
+.post-form-container {
+    margin: 0 auto;
+    padding: 32px 20px;
+    max-width: 800px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(30, 41, 59, 0.10);
+}
+
+.post-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+    gap: 1.2rem;
+}
+
+.post-form label {
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #3730a3;
+}
+
+.post-input, .post-textarea, .post-select, .post-quill {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    border: 1.5px solid #cbd5e1;
+    background: #f8fafc;
+    font-size: 1rem;
+    transition: border 0.2s;
+}
+.post-input:focus, .post-textarea:focus, .post-select:focus, .post-quill:focus-within {
+    border: 1.5px solid #6366f1;
+    outline: none;
+}
+
+.post-quill {
+    min-height: 180px;
+    background: #f8fafc;
+    border-radius: 8px;
+    border: 1.5px solid #cbd5e1;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.ql-container {
+    min-height: 120px;
+    border-radius: 0 0 8px 8px !important;
+    background: #f8fafc;
+    font-size: 1rem;
+}
+
+.ql-toolbar {
+    border-radius: 8px 8px 0 0 !important;
+    background: #f8fafc;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 8px 8px 0 8px;
+}
+
+.ql-editor {
+    min-height: 100px;
+    background: #f8fafc;
+    border-radius: 0 0 8px 8px;
+    font-size: 1rem;
+    padding: 12px;
+}
+
+.post-textarea {
+    min-height: 120px;
+    resize: vertical;
+    background: #f8fafc;
+    border-radius: 8px;
+    border: 1.5px solid #cbd5e1;
+    font-size: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.post-checkbox {
+    margin-right: 10px;
+    accent-color: #6366f1;
+}
+
+.submit-btn, .post-submit-btn {
+    background: linear-gradient(90deg, #6366f1 0%, #60a5fa 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.08);
+    transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+    margin-top: 1rem;
+}
+.submit-btn:hover, .post-submit-btn:hover {
+    background: linear-gradient(90deg, #4338ca 0%, #2563eb 100%);
+    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.12);
+    transform: translateY(-2px) scale(1.03);
+}
+
+/* Custom Multi-Value for URLs */
+.custom-url {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f1f5f9;
+    border-radius: 6px;
+    padding: 0.2rem 0.6rem;
+    margin: 0.2rem 0;
+}
+.source-url-link {
+    color: #2563eb;
+    text-decoration: underline;
+    font-size: 0.98rem;
+    font-weight: 500;
+}
+.copy-btn, .remove-btn {
+    background: none;
+    border: none;
+    color: #6366f1;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 0 0.3rem;
+    transition: color 0.2s;
+}
+.copy-btn:hover, .remove-btn:hover {
+    color: #dc2626;
+}
+
+/* react-select dropdown improvements */
+.post-select .css-26l3qy-menu {
+    max-height: 300px !important;
+    min-height: 150px !important;
+    overflow-y: auto !important;
+    padding: 5px !important;
+}
+.post-select .css-4ljt47-MenuList {
+    max-height: 250px !important;
+    overflow-y: auto !important;
+    padding-top: 0 !important;
+}
+.post-select .css-1n7v3ny-option {
+    padding: 10px !important;
+}
+
+.show-contexts-btn {
+    background: linear-gradient(90deg, #6366f1 0%, #60a5fa 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.08);
+    margin: 0;
+    outline: none;
+    display: inline-block;
+}
+.show-contexts-btn:hover {
+    background: linear-gradient(90deg, #4338ca 0%, #2563eb 100%);
+    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.12);
+    transform: translateY(-2px) scale(1.03);
+}

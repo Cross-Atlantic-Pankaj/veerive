@@ -1,0 +1,126 @@
+/* Basic reset */
+body, html {
+    margin: 0; /* Remove default margin around the body and html elements */
+    padding: 0; /* Remove default padding around the body and html elements */
+    height: 100%; /* Set the height of the body and html to 100% of the viewport height */
+    font-family: 'Inter', Arial, sans-serif; /* Set the default font for the document to Arial, with sans-serif as a fallback */
+    background: linear-gradient(120deg, #e0e7ff 0%, #f0fdfa 100%);
+}
+
+/* Centering the container */
+.login-container {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: center; /* Center the content horizontally within the container */
+    align-items: center; /* Center the content vertically within the container */
+    height: 100vh; /* Set the container height to 100% of the viewport height */
+    background: none;
+}
+
+/* Styling the login card */
+.login-card {
+    background: #fff;
+    padding: 2.5rem 2.5rem 2rem 2.5rem;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(30, 41, 59, 0.15);
+    width: 100%;
+    max-width: 410px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Styling the title */
+.login-title {
+    margin-bottom: 1.5rem;
+    color: #3730a3;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+}
+
+/* Styling the input fields */
+.login-input {
+    width: 100%;
+    padding: 1rem;
+    margin: 0.7rem 0;
+    border-radius: 8px;
+    border: 1.5px solid #cbd5e1;
+    box-sizing: border-box;
+    font-size: 1.08rem;
+    background: #f8fafc;
+    color: #1e293b;
+    transition: border 0.2s;
+}
+.login-input:focus {
+    border: 1.5px solid #6366f1;
+    outline: none;
+}
+
+/* Styling the login button */
+.login-button {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(90deg, #6366f1 0%, #60a5fa 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.08rem;
+    font-weight: 700;
+    margin-top: 1.2rem;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.08);
+}
+.login-button:hover {
+    background: linear-gradient(90deg, #4338ca 0%, #2563eb 100%);
+    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.12);
+    transform: translateY(-2px) scale(1.03);
+}
+
+.login-error {
+    color: #dc2626;
+    font-size: 1rem;
+    margin: 0.5rem 0 0.2rem 0;
+    text-align: left;
+}
+
+.login-links {
+    margin-top: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.forgot-password-link {
+    color: #6366f1;
+    text-decoration: underline;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+.forgot-password-link:hover {
+    color: #2563eb;
+}
+
+/* Modern Remember Me Checkbox */
+.remember-me-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.5rem 0 0.2rem 0;
+    justify-content: flex-start;
+}
+.remember-me-container input[type="checkbox"] {
+    accent-color: #6366f1;
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 4px;
+    border: 1.5px solid #cbd5e1;
+    cursor: pointer;
+    margin: 0;
+}
+.remember-me-container label {
+    font-size: 1rem;
+    color: #3730a3;
+    font-weight: 500;
+    cursor: pointer;
+}
