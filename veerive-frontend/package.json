@@ -26,7 +26,7 @@
     "libreoffice-convert": "^1.7.0",
     "lucide-react": "^0.536.0",
     "mongoose": "^8.12.1",
-    "next": "^15.2.3",
+    "next": "^15.5.19",
     "next-auth": "^4.24.11",
     "nodemailer": "^6.10.0",
     "officegen": "^0.6.5",
